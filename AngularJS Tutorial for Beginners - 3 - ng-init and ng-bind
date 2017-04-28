@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJs</title>
+</head>
+<body ng-app="myapp"  ng-init="even=[2,4,6,8]">
+
+    <p>The area is {{a*b}}</p>
+    <p>The area is <span ng-bind="a*b"></span></p>
+    <p>Full Name is {{fastname+ " " + lastname }} </p>
+    <p>Full name is <span ng-bind=" fastname+ ' ' + lastname"></span></p>
+    <p>Array with index even[2] = {{even[2]}}</p>
+    <p>Array with index even[2] = <span ng-bind="even[2]"></span></p>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
