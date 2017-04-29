@@ -1,0 +1,31 @@
+In app.js file:
+
+var app=angular.module('myapp',[]);
+
+app.controller('mycontroller',['$scope',function($scope){
+
+	$scope.name = 'Gollam Rabby in app.js'
+	$scope.age = 25;
+
+}]);
+
+In angularJS.html file:
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJs</title>
+</head>
+<body ng-app="myapp">
+    
+   <div ng-controller = "mycontroller">
+   	
+        {{name}} {{age}}
+
+   </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
