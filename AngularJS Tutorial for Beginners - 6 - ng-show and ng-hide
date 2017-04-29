@@ -1,0 +1,41 @@
+app.js file :
+
+var app=angular.module('myapp',[]);
+
+app.controller('mycontroller',['$scope',function($scope){
+
+	$scope.firstname = 'Gollam';
+	$scope.lastname = 'Rabby';
+	$scope.fullname = function(){
+
+		return $scope.firstname + " " + $scope.lastname;
+	};
+	$scope.coder = true;
+	$scope.codename = 'tourist800';
+
+}]);
+
+angularjs.html file :
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJs</title>
+</head>
+<body ng-app="myapp">
+    
+   <div ng-controller = "mycontroller">
+   	
+        <p ng-hide="coder">First name is {{firstname}}</p>
+        <p ng-hide="coder">Last name is {{lastname}}</p>
+        <p ng-hide="coder">Full name is {{fullname()}}</p>
+        <p ng-show="coder">Codename is {{codename}}</p>
+
+
+   </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
